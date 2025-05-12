@@ -15,8 +15,7 @@
 
 - 🔭 I’m currently working on a vulnerability management project with Qualys
 - 🌱 I’m currently learning at Whatcomm Community College
-- 🤔 I’m looking for help with getting an Cybersecurity Internship
 - 📫 How to reach me: tuke0513@gmail.com
-- 😄 Pronouns: he/him
+- 😄 
 - ⚡ Fun fact: Did you know that the term "firewall" originally comes from construction? It was used to describe a wall built to prevent the spread of fire between buildings or compartments. In cybersecurity, a firewall serves a similar purpose, acting as a barrier to block unauthorized access while allowing legitimate traffic to pass through, just like its namesake in construction!
 -->
