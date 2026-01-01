@@ -12,7 +12,7 @@
   - [Monitoring Security Logs](https://github.com/TayLuo/Cybersecurity-Project-with-PowerShell/blob/main/EventLog%20Monitoring.txt)
 
 - <b>Create a local admin and disable built-in administrator</b>
-  - [local admin and disable built-in administrator](https://github.com/TayLuo/Cybersecurity-Project-with-PowerShell/blob/main/Create%20ADUsers.txt)
+  - [local admin and disable built-in administrator](https://github.com/TayLuo/PowerShell-Script-for-Creating-Users/blob/main/New-LocalAdminAndDisableBuiltIn)
 
 - 🔭 I’m currently working on a vulnerability management project with Qualys
 - 🌱 I’m currently learning at Whatcomm Community College
