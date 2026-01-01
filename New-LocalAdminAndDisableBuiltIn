@@ -1,0 +1,25 @@
+function New-LocalAdminAndDisableBuiltIn {
+    param(
+        [string]$UserName = "admin"
+    )
+
+    # Prompt for password securely
+    $SecurePassword = Read-Host "Enter password for $UserName" -AsSecureString
+
+    # Create local admin if not exists
+    New-LocalUser -Name $UserName -Password $SecurePassword -FullName "Admin Here" -Description "Custom local admin account"
+    Write-Host "Created local user '$UserName'."
+    
+
+    # Add to Administrators group
+    Add-LocalGroupMember -Group "Administrators" -Member $UserName
+    Write-Host "Added '$UserName' to Administrators."
+
+    # Set password never expires
+    Set-LocalUser -Name $UserName -PasswordNeverExpires $true
+    Write-Host "Password set to never expire."
+
+    # Disable built-in Administrator
+    Disable-LocalUser -Name "Administrator"
+    Write-Host "Disabled built-in Administrator."
+}
