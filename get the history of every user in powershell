@@ -1,0 +1,11 @@
+$UserHistory = @(Get-ChildItem "C:\Users\*\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt").FullName;
+$UserHistory += @(Get-ChildItem "c:\windows\system32\config\systemprofile\appdata\roaming\microsoft\windows\powershell\psreadline\consolehost_history.txt" -ErrorAction SilentlyContinue).FullName;
+foreach ($Item in $UserHistory) {
+    if ($Item) {
+        Write-Output ""
+        Write-Output "###############################################################################################################################"
+        Write-Output "PowerShell history: $item"
+        Write-Output "###############################################################################################################################"
+        Get-Content $Item
+    }
+}
