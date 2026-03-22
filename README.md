@@ -15,6 +15,10 @@
   - [local admin and disable built-in administrator](https://github.com/TayLuo/PowerShell-Script-for-Creating-Users/blob/main/New-LocalAdminAndDisableBuiltIn)
 - <b>Check all users history in PowerShell</b>
   - [Check all users history in PowerShel](https://github.com/TayLuo/PowerShell-Script-for-Creating-Users/blob/main/get%20the%20history%20of%20every%20user%20in%20powershell)
+ 
+  - <b>Change Power Setting in PowerShell</b>
+  - [Change Power and Display Setting](https://github.com/TayLuo/PowerShell-Script-for-Creating-Users/upload/main)
+
 
 
 - 🔭 I’m currently working on a vulnerability management project with Qualys
