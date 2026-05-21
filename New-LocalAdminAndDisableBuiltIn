@@ -2,7 +2,6 @@ function New-LocalAdminAndDisableBuiltIn {
     param(
         [string]$UserName = "admin"
     )
-
     # Prompt for password securely
     $SecurePassword = Read-Host "Enter password for $UserName" -AsSecureString
 
@@ -22,4 +21,28 @@ function New-LocalAdminAndDisableBuiltIn {
     # Disable built-in Administrator
     Disable-LocalUser -Name "Administrator"
     Write-Host "Disabled built-in Administrator."
+}
+
+function Update-Windows {
+      Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+      Install-PackageProvider -Name NuGet -Force
+
+    # 1. Install/Update the module silently
+    Install-Module -Name PSWindowsUpdate -Force -ErrorAction SilentlyContinue
+
+    # 2. Import module
+    Import-Module PSWindowsUpdate
+
+    # 3. Run your specific update sequence
+    Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -AutoReboot -Verbose
+}
+
+$apps = @(
+    "C:\Installers\App1.exe",
+    "C:\Installers\App2.exe",
+    "C:\Installers\App3.exe"
+)
+
+foreach ($app in $apps) {
+    Start-Process -FilePath $app -q 
 }
