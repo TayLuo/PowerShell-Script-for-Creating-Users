@@ -46,3 +46,16 @@ $apps = @(
 foreach ($app in $apps) {
     Start-Process -FilePath $app -q 
 }
+
+Installing Customed Printer 
+
+# Define a printer name
+$printerName = Read-Host -Prompt "What is the name of the printer?"
+
+# Define the Printer IP
+$PortName = Read-Host -Prompt "What is the IP of the printer?"
+
+# Find the universal of the printer driver
+$Driver = " "
+
+Add-Printer -Name $printerName -DriverName $Driver -PortName $PortName
